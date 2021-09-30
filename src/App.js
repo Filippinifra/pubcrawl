@@ -8,7 +8,7 @@ import { CustomizedSteppers } from "components/Stepper";
 import { useWindowSize } from "utils/sizeHook";
 import { ProhibitionIcons } from "components/ProhibitionIcons";
 import { MOBILE_SIZE, TABLET_SIZE } from "./constants/size.js";
-import { DATE, LOCATION_PLACE, START, START_DATE, START_TIME, TITLE, LOCATION, STEPS, TIP } from "./constants/labels.js";
+import { DATE, LOCATION_PLACE, START, START_DATE, START_TIME, TITLE, LOCATION, STEPS } from "./constants/labels.js";
 
 const App = () => {
   const { width } = useWindowSize();
