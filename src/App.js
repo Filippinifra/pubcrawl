@@ -1,16 +1,6 @@
 import React from "react";
 
-import {
-  PageContainer,
-  TicketContainer,
-  SuperiorWrapper,
-  ImgBarCodeWrapper,
-  IconsMobileWrapper,
-  CentralWrapper,
-  BarCodeMobileWrapper,
-  InferiorBlock,
-  CentrateWrapper,
-} from "./styles.js";
+import { PageContainer, TicketContainer, SuperiorWrapper, ImgBarCodeWrapper, IconsMobileWrapper, CentralWrapper, BarCodeMobileWrapper, InferiorBlock, CentrateWrapper } from "./styles.js";
 
 import barCodeImg from "img/barCode.png";
 import { CustomizedSteppers } from "components/Stepper";
@@ -18,17 +8,7 @@ import { CustomizedSteppers } from "components/Stepper";
 import { useWindowSize } from "utils/sizeHook";
 import { ProhibitionIcons } from "components/ProhibitionIcons";
 import { MOBILE_SIZE, TABLET_SIZE } from "./constants/size.js";
-import {
-  DATE,
-  LOCATION_PLACE,
-  START,
-  START_DATE,
-  START_TIME,
-  TITLE,
-  LOCATION,
-  STEPS,
-  TIP,
-} from "./constants/labels.js";
+import { DATE, LOCATION_PLACE, START, START_DATE, START_TIME, TITLE, LOCATION, STEPS, TIP } from "./constants/labels.js";
 
 const App = () => {
   const { width } = useWindowSize();
@@ -46,9 +26,7 @@ const App = () => {
               <img src={barCodeImg} alt="barcode" style={{ height: 200 }}></img>
             </ImgBarCodeWrapper>
           )}
-          <div
-            style={{ width: isMobile ? "100%" : "80%", position: "relative" }}
-          >
+          <div style={{ width: isMobile ? "100%" : "80%", position: "relative" }}>
             {!isMobile && <ProhibitionIcons />}
             <CentrateWrapper>
               <div style={{ marginRight: 10 }}>{`${DATE}:`}</div>
@@ -76,19 +54,16 @@ const App = () => {
               >
                 {`${STEPS}:`}
               </div>
-              <CustomizedSteppers
-                isMobile={isMobile}
-                isMiniMobile={isMiniMobile}
-              />
+              <CustomizedSteppers isMobile={isMobile} isMiniMobile={isMiniMobile} />
             </div>
-            <div
+            {/* <div
               style={{
                 borderTop: "1px solid black",
                 opacity: 0.1,
                 marginTop: isMobile ? 30 : 10,
               }}
-            />
-            <div style={{ fontSize: 8, marginTop: 20 }}>{TIP}</div>
+            /> */}
+            {/* <div style={{ fontSize: 8, marginTop: 20 }}>{TIP}</div> */}
           </div>
           {isMobile && (
             <IconsMobileWrapper>
@@ -97,11 +72,7 @@ const App = () => {
           )}
           {isMobile && (
             <BarCodeMobileWrapper>
-              <img
-                alt="barcode-mobile"
-                src={barCodeImg}
-                style={{ height: 200 }}
-              ></img>
+              <img alt="barcode-mobile" src={barCodeImg} style={{ height: 200 }}></img>
             </BarCodeMobileWrapper>
           )}
         </CentralWrapper>

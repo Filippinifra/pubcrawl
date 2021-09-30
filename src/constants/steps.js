@@ -1,7 +1,1 @@
-export const STEPS = [
-  "JOY",
-  "Birrificio Lambrate",
-  "Au Vieux Strasb.",
-  "Union Club",
-  "Bar Picchio",
-];
+export const STEPS = ["JOY", "Au Vieux Strasb.", "Union Club"];
