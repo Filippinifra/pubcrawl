@@ -35,7 +35,7 @@ export const ProhibitionIcons = () => {
           <img alt="birra" src={Birra} style={{ height: 28, width: 28 }} />
         </Circle>
       </div>
-      {!isMobile && <img alt="" src={Gaspe} style={{ height: 100, width: "fit-content", marginLeft: "auto", marginTop: 30 }} />}
+      {!isMobile && <img alt="" src={Gaspe} style={{ height: 100, width: 60, marginLeft: "auto", marginTop: 30 }} />}
     </div>
   );
 };
