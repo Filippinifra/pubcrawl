@@ -9,6 +9,7 @@ import { useWindowSize } from "utils/sizeHook";
 import { ProhibitionIcons } from "components/ProhibitionIcons";
 import { MOBILE_SIZE, TABLET_SIZE } from "./constants/size.js";
 import { DATE, LOCATION_PLACE, START, START_DATE, START_TIME, TITLE, LOCATION, STEPS } from "./constants/labels.js";
+import Gaspe from "img/gaspe.png";
 
 const App = () => {
   const { width } = useWindowSize();
@@ -27,6 +28,7 @@ const App = () => {
             </ImgBarCodeWrapper>
           )}
           <div style={{ width: isMobile ? "100%" : "80%", position: "relative" }}>
+            {isMobile && <img alt="" src={Gaspe} style={{ height: 70, position: "absolute", top: 0, right: 0 }} />}
             {!isMobile && <ProhibitionIcons />}
             <CentrateWrapper>
               <div style={{ marginRight: 10 }}>{`${DATE}:`}</div>
@@ -66,14 +68,14 @@ const App = () => {
             {/* <div style={{ fontSize: 8, marginTop: 20 }}>{TIP}</div> */}
           </div>
           {isMobile && (
-            <IconsMobileWrapper>
-              <ProhibitionIcons />
-            </IconsMobileWrapper>
-          )}
-          {isMobile && (
-            <BarCodeMobileWrapper>
-              <img alt="barcode-mobile" src={barCodeImg} style={{ height: 200 }}></img>
-            </BarCodeMobileWrapper>
+            <>
+              <IconsMobileWrapper>
+                <ProhibitionIcons />
+              </IconsMobileWrapper>
+              <BarCodeMobileWrapper>
+                <img alt="barcode-mobile" src={barCodeImg} style={{ height: 200 }}></img>
+              </BarCodeMobileWrapper>
+            </>
           )}
         </CentralWrapper>
         <InferiorBlock />
